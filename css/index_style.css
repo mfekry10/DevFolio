@@ -1,0 +1,479 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/*===============================================*/
+/* ------- General Style 
+/*===============================================*/
+:root{
+    --main_background:whitesmoke;
+}
+body{
+    background-color:var(--main_background,grey);
+}
+.w-85{
+    width: 85%;
+}
+.w-90{
+    width: 90%;
+}
+.line{
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+/*===============================================*/
+/* ------- Start Header Style 
+/*===============================================*/
+.z-index{
+    z-index: 1;
+}
+.header .navbar{
+    padding: 20px 0px;
+}
+.header .navbar-brand{
+    font-weight: bold;
+    font-size: 1.7rem;
+    letter-spacing: 1;
+}
+.header .navbar-nav a{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+/*===============================================*/
+/* ------- Start HOME Style  
+/*===============================================*/
+.home{
+    background-color: red;
+    height: 100vh;
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;   
+}
+.home .overlay{
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home h1{
+    font-size: 4.5rem;
+}
+.home p{
+    overflow: hidden; 
+    font-size: 2.5rem;
+    border-right: .15em solid #fff;
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    display: inline-block;
+    animation: typing 4s steps(22) infinite, blink .5s step-end infinite alternate;
+}
+@keyframes typing {
+    0% { 
+        width: 0;
+    }
+    50%{
+        width: 12ch;
+    }
+    100%{
+        width: 0;
+    }
+}
+@keyframes blink {
+    50% { 
+        border-color: #fff; 
+    }
+}
+/*===============================================*/
+/* ------- Start About Me Style  
+/*===============================================*/
+.about_desc{
+    background-color: #fff;
+    padding: 3rem;
+}
+.about ul{
+    list-style: none;
+}
+.about ul li{
+    margin-bottom: 1rem;
+}
+.about ul span{
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+.skills p{
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+.skills .progress{
+    height: 0.7rem;
+    border-radius: 0;
+}
+.about_me h5::after{
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0px;
+    width: 100px;
+    height: 3px;
+    background-color: #0078ff;
+}
+.about_me p{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+/*===============================================*/
+/* ------- Start Services Style  
+/*===============================================*/
+.services_title{
+    margin-bottom: 4rem;
+}
+.services_title h3{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.service_box{
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    -moz-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -o-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+.sevice_icon{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #0078ff;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: 500ms all;
+}
+.sevice_icon i{
+    font-size: 40px;
+    transition: 500ms all;
+}
+.sevice_content h3{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+}
+.sevice_content p{
+    color: #4e4e4e;
+}
+
+.service_box:hover .sevice_icon{
+    border-color: #cde1f8;
+    background-color: #0078ff;
+}
+.service_box:hover i{
+   color: #fff;
+}
+/*===============================================*/
+/* ------- Start Counter Style  
+/*===============================================*/
+.counter{
+    background-image: url(../images/counters-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 8rem 0;
+    color: #fff;
+}
+.counter .overlay{
+    background-color: #0078ff;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.7;
+}
+.counter_box{
+    margin-bottom: 1.8rem;
+}
+.counter_icon{
+    width: 80px;
+    height: 80px;
+    border: 10px solid #cde1f8;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.counter_icon i{
+    font-size: 2rem;
+}
+.counter_content p{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+/*===============================================*/
+/* ------- Start Portfolio Style  
+/*===============================================*/
+.portfolio_title{
+    margin-bottom: 4rem;
+}
+.portfolio_title h3{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.portfolio_box{
+    background-color: #fff;
+    margin-bottom: 3rem;
+    -webkit-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -o-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+.portfolio .portfolio_content{
+    padding: 2rem 3% 1rem 4%;
+}
+.portfolio .content_left h3{
+    font-size: 1.2rem;
+}
+.portfolio .content_left span:first-child{
+    color: #0078ff;
+}
+.portfolio .portfolio_desc{
+    font-size: .8rem;
+}
+.portfolio i{
+    font-size: 2.5rem;
+    color: #0078ff;
+}
+.portfolio_img{
+    overflow: hidden;
+}
+.portfolio_box img{
+    transition: .8s all;
+}
+.portfolio_box:hover img{
+    transform: scale(1.2);
+}
+/*===============================================*/
+/* ------- Start Portfolio Style  
+/*===============================================*/
+.testimonial{
+    background-image: url(../images/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 8rem 0;
+}
+.testimonial .overlay{
+    background-color: #0078ff;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.7;
+}
+.testimonial .carousel-indicators{
+    margin-bottom: 0;
+}
+.testimonial .carousel-indicators [data-bs-target]{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.testimonial .carousel-caption{
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+}
+
+/*===============================================*/
+/* ------- Start Blog Style  
+/*===============================================*/
+.blog{
+    padding-bottom: 8rem;
+}
+.blog_box{
+    -webkit-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -o-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+.blog_content{
+    background-color: #fff;
+    padding: 1rem;
+}
+.blog_content h6{
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+    background-color: #0078ff;
+    padding: 5px 15px;
+}
+.blog .blog_title{
+    top: -30px;
+}
+.blog_content h3{
+    font-size: 1.3rem;
+    margin-top: 0.6rem;
+}
+.blog_content p{
+    color: #4e4e4e;
+}
+.blog_footer {
+    padding: 0.5rem 1rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+.blog_footer img{
+    width: 32px;
+
+}
+/*===============================================*/
+/* ------- Start Contact Style  
+/*===============================================*/
+.contact{
+    background-image: url(../images/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 8rem 0;
+    -webkit-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    -o-box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+.contact .overlay{
+    background-color: #0078ff;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.7;
+}
+.contact_box{
+    background-color: #fff;
+    padding: 3rem;
+}
+.contact_box h5{
+    font-size: 2rem;
+}
+.contact_box h5::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width:100px;
+    height: 3px;
+    background-color: #0078ff;
+}
+.contact .form-control{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.contact button{
+    background: #0078ff;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    border-radius: 5rem;
+    transition: .6s all;
+}
+.contact button:hover{
+    background-color: #3393ff;
+    -webkit-box-shadow:0 0 0 4px #cde1f8;
+    -moz-box-shadow: 0 0 0 4px #cde1f8;
+    -o-box-shadow: 0 0 0 4px #cde1f8;
+    box-shadow: 0 0 0 4px #cde1f8;
+}
+.get_in_touch p{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.get_in_touch i{
+    color: #0078ff;
+    margin-right: 10px;
+}
+.get_in_touch .social_icons li{
+    margin: 0 15px 0 0;
+    padding: 2px 8px;
+    border: 3px solid #0078ff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    line-height: 1.6;
+    transition: .6s all;
+}
+.get_in_touch .social_icons li i{
+    color: #1e1e1e;
+    margin: auto;
+    transition: .6s all;
+}
+.get_in_touch .social_icons li:hover{
+    border-color: #cde1f8;
+    background-color: #0078ff;
+}
+.get_in_touch .social_icons li:hover i{
+    color: #fff;
+}
+/*===============================================*/
+/* ------- Start Footer Style  
+/*===============================================*/
+.footer{
+    padding: 25px 0;
+    color: #fff;
+    background: #0062d3;
+}
+.footer span{
+    font-weight: bold;
+}
+/*===============================================*/
+/* ------- Start Media Query 
+/*===============================================*/
+@media screen and (max-width:991px){
+    .header .navbar-nav{
+        background-color: #fff;
+    }
+    .header .navbar-nav li{
+        padding: 0px 2rem;
+    }
+    .header .navbar-nav a{
+        color: #000 !important;
+    }
+    .about h5{
+       margin-top: 1rem;
+    }
+}
+@media screen and (max-width:575px){
+    .about .about_desc{
+        padding: 3rem 2rem;
+    }
+    .about ul{
+        padding-left: 0rem;
+        margin-top: 1rem;
+    }
+}
+
